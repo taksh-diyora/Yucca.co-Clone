@@ -1,0 +1,514 @@
+@font-face {
+    font-family: 'Magnetik';
+    src: url(./Font/Magnetik-ExtraLight.otf);
+}
+@font-face {
+    font-family: 'Magnetik-Regular';
+    src: url(./Font/Magnetik-Medium.otf);
+}
+@font-face {
+    font-family: 'Magnetik-A';
+    src: url(./Font/Magnetik-Light.otf);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Magnetik', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  scrollbar-width: none;    
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    position: relative;
+}
+
+.front-page{
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+}
+
+.background-image-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.background-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: calc(12vh - 3px);
+    display: flex;
+    z-index: 100;
+    transition: all ease 0.5s;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.23);
+}
+
+nav:hover{
+    background-color: white;
+}
+
+.left-nav{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8%;
+    padding-left: calc(10% + 10px);
+}
+
+.left-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.left-part svg{
+    width: 36px;
+    height: 36px;
+}
+
+.left-part h1{
+    width: 100px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.left-part h1 span{
+    font-family: 'Magnetik-Regular';
+}
+
+.right-part{
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    color: #1c1b19;
+}
+
+.right-part h1{
+    width: fit-content;
+    font-size: 14.5px;
+    font-weight: 400;
+}
+
+.right-nav{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    align-items: center;
+}
+
+.credit-app{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: gray;
+    padding-right: 15px;
+}
+
+.credit-app h1{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.credit-app i{
+    font-size: 15px;
+}
+
+.right-nav-icon{
+    width: 28px;
+    height: 28px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.icon-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: all ease 0.3s;
+    background-color: transparent;
+}
+
+.icon-container i{
+    font-size: 10px;
+}
+
+.icon-overlay i{
+    font-size: 10px;
+}
+
+.icon-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    transition: all ease 0.3s;
+    background-color: #1D1D1B;
+}
+
+.right-nav-icon:hover .icon-overlay{
+    top: 0;
+}
+.right-nav-icon:hover .icon-container{
+    top: -100%;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content{
+    position: absolute;
+    top: 17%;
+    left: calc(10% + 10px);
+    width: 45%;
+}
+
+.content p{
+    font-size: 78px;
+    font-weight: 300;
+    line-height: 114%;
+}
+
+.boxes{
+    width: calc(59% - 20px);
+    height: 287px;  
+    position: absolute;
+    top: calc(54% + 13px);
+    left: calc(10% + 10px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    background-color: rgba(255, 255, 255, 0.25);
+    width: calc(32% + 2px);
+    height: 100%;
+    backdrop-filter: blur(1.6rem);
+    border-radius: 15px;
+    position: relative;
+}
+
+.no-hover{
+    width: 100%;
+    height: 100%;
+    top: calc(40% + 10px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.no-hover h1{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0%;
+    font-weight: 400;
+    transition: all ease 0.5s;
+    font-size: 28.5px;
+}
+
+.box:hover .no-hover h1{
+    top: -10%;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: all ease 0.5s;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.para{
+    width: 100%;
+    position: relative;
+    height: 3vh;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.para h4{
+    position: absolute;
+    top: 150%;
+    font-size: 14px;
+    transition: all ease 0.7s;
+    font-weight: 200;
+}
+
+.box:hover .overlay{
+    background-color: #fffdf5;
+}
+
+.box:hover .overlay .para h4{
+    top: 0;
+}
+
+.horizontal-line{
+    width: 80%;
+    height: 10px;
+    position: absolute;
+    top: 80%;
+    padding-left: 10%;
+}
+
+.horizontal-line::after{
+    content: "";
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    background-color: black;
+    transition: all ease 0.7s;
+}
+
+.box:hover .horizontal-line::after{
+    width: 100%;
+}
+
+.tell-me-part{
+    width: 100%;
+    height: 12%;
+    bottom: 4%;
+    position: absolute;
+    padding-left: calc(10%);
+    padding-right: 10%;
+}
+
+.effect-part h5{
+    font-weight: 300;
+}
+
+.tell-me-container{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.effect-part{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    transition: all ease 0.7s;
+}
+
+.effect-part-arrow{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover .effect-part{
+    top: 0;
+}
+
+.marquee{
+    width: 100%;
+    height: 100%;
+    background-color: #dfdac6;
+    position: relative;
+}
+
+.marquee img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 0.5;
+}
+
+.marquee-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.marquee-content{
+    width: fit-content;
+    height: 10vh;
+}
+
+.marquee-content-upper{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    animation: anime 10s infinite linear;
+}
+
+.marquee-content-upper h1{
+    width: fit-content;
+    height: 80%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 56.8889px;
+    font-family: 'Magnetik-A';
+}
+
+@keyframes anime {
+    0%{
+        transform: translate(calc(-25% - 318px));
+    }
+    100%{
+        transform: translateX(calc(0%));
+    }
+}
+
+.marquee-content-lower{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    animation: anime-bottom 10s infinite linear;
+}
+
+.marquee-content-lower h1{
+    width: fit-content;
+    font-size: 56.8889px;
+    height: 80%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-family: 'Magnetik-A';
+}
+
+@keyframes anime-bottom {
+    0%{
+        transform: translateX(calc(0%));
+    }
+    100%{
+        transform: translateX(calc(-25% - 202px));
+    }
+}
+
+.image-cards-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #dfdac6;
+}
+
+.imgbx{
+    height: 287px;
+    width: 287px;
+    transition: all ease 0.5s;
+    z-index: 100;
+}
+
+.imgbx1:hover{
+    transform: scale(130%);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.imgbx2:hover{
+    transform: scale(130%);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.imgbx3:hover{
+    transform: scale(130%);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.image-cards-container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    transition: 1s cubic-bezier(0, 0.8, 0.72, 1.03);
+    transform: scale(110%);
+    opacity: 0;
+}
+
+.imgbx1:hover ~ .img1{
+    transform: scale(100%);
+    z-index: 1;
+    opacity: 1;
+}
+
+.imgbx2:hover ~ .img2{
+    transform: scale(100%);
+    opacity: 1;
+    z-index: 1;
+}
+.imgbx3:hover ~ .img3{
+    transform: scale(100%);
+    opacity: 1;
+    z-index: 1;
+}
+
+.imgbx .no-hover{
+    color: white;
+}

@@ -521,6 +521,274 @@ nav:hover{
     color: white;
 }
 
+.page-4{
+    width: 100%;
+    height: auto;
+    background-color: #fffdf5;
+}
+
+.page-4-info{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.p4-sec1{
+    border-bottom: 1px solid gray;
+}
+
+.p4-sec{
+    border-top: 1px solid gray;
+}
+
+.p4-sec, .p4-sec1{
+    height: 33%;
+    width: 100%;
+    padding: 0 calc(10% + 10px);
+    display: flex;
+    align-items: center;
+}
+
+.p4-sec h1{
+    font-size: 30px;
+    font-family: 'Magnetik-A';
+    font-weight: 300;
+    width: 60%;
+}
+
+.p4-sec:nth-child(1) h1{
+    font-size: 57px;
+}
+
+.p4-sec1-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.p4-sec1-right p{
+    font-size: 18px;
+}
+
+.p4-h3{
+    position: relative;
+    height: 4vh;
+    width: 10vh;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.p4-h3 h3{
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.no-hover-h3{
+    background-color: black;
+    color: #fffdf5;
+    width: fit-content;
+    height: 4vh;
+    width: 10vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transition: all ease 0.5s;
+}
+
+.overlay-h3{
+    background-color: rgb(63, 63, 63);
+    color: #fffdf5;
+    width: fit-content;
+    height: 4vh;
+    width: 10vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -100%;
+    transition: all ease 0.3s;
+}
+
+.p4-h3:hover .no-hover-h3{
+    top: -100%;
+}
+
+.p4-h3:hover .overlay-h3{
+    bottom: 0%;
+}
+
+.p4-products{
+    width: 100%;
+    padding: 0 calc(10% + 10px);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.p4-products-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.p4-products-top h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Magnetik-A';
+}
+
+.p4-product-box{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5vh;
+}
+
+.shop-now-p4{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.p4-box1{
+    height: 50vh;
+    width: 40vh;
+    margin-top: 5vh;
+}
+
+.p4-product-container{
+    height: 40vh;
+    width: 40vh;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.p4-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.p4-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+
+.p4-product-container:hover .p4-image img{
+    transform: scale(108%);
+}
+
+.p4-product-container h4{
+    position: absolute;
+    right: -10px;
+    rotate: 90deg;
+    top: 10%;
+    background-color: #616958;
+    padding: 0px 8px 7px 8px;
+    height: 35px;
+    display: flex;
+    align-items: flex-end;
+    color: #fffdf5;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+.p4-box1 h5{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 1vh 0;
+}
+
+.page-5{
+    width: 100%;
+    height: 75vh;
+    background-color: #12271d;
+    color: #fffdf5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6vh;
+}
+
+.p5-top{
+    display: flex;
+    height: 33vh;
+}
+
+.p5-left{
+    padding: 0 calc(10% + 10px);
+    width: 75%;
+}
+
+.p5-left h5{
+    font-weight: 400;
+    margin-bottom: 2vh;
+    font-size: 18px;
+}
+
+.p5-left h1{
+    font-family: 'Magnetik-A';
+    font-size: 58px;
+    line-height: 110%;
+    font-weight: 400;
+}
+
+.p5-right{
+    width: 25%;
+}
+
+.p5-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(10%);
+    scale: 150%;
+}
+
+.p5-marquee{
+    height: 20vh;
+    width: 100%;
+    border-top: 1px solid #fffdf5;
+    border-bottom: 1px solid #fffdf5;
+    display: flex;
+    align-items: center;
+}
+
+.p5-marquee-text{
+    display: flex;
+    align-items: center;
+    animation: p5-marquee 8s infinite linear;
+}
+
+.p5-marquee-text h1{
+    font-size: 40px;
+    flex-shrink: 0;
+    font-family: 'Magnetik-A';
+    font-weight: 400;
+    padding: 0px 1vh;
+}
+
+.p5-marquee-text svg{
+    flex-shrink: 0;
+    padding: 0px 1vh;
+}
+
+@keyframes p5-marquee{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+    transform: translateX(calc(-56% - 0.8vh));
+    }
+}
+
 @media (max-width: 480px) {
 
     nav{

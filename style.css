@@ -603,6 +603,8 @@ nav:hover{
         flex-direction: column;
         width: 95%;
         gap: 10px;
+        top: auto;
+        bottom: 15vh;
     }
 
     .box{

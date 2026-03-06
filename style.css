@@ -676,6 +676,7 @@ nav:hover{
     gap: 1vh;
     opacity: 0;
     transition: all ease 0.3s;
+    overflow: hidden;
 }
 
 .quantity-container-box h3{
@@ -684,6 +685,31 @@ nav:hover{
     border: 1px solid #12271d;
     font-weight: 400;
     padding: 3px 6px;
+}
+
+.just-for-checking-container{
+    opacity: 0;
+}
+
+.no-overlay-quantity, .overlay-quantity{
+    position: absolute;
+}
+
+.no-overlay-quantity{
+    top: 0;
+    transition: all ease 0.3s;
+}
+
+.overlay-quantity{
+    transition: all ease 0.3s;
+    bottom: -100%;
+}
+
+.quantity-container-effect:hover .no-overlay-quantity{
+    top: -100%;
+}
+.quantity-container-effect:hover .overlay-quantity{
+    bottom: 0%;
 }
 
 .p4-product-container:hover .quantity-container-box{

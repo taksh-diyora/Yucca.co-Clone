@@ -876,7 +876,328 @@ nav:hover{
 .right-faq{
     height: 100%;
     width: 50%;
-    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.right-faq-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gray;
+    padding-right: 0.5vh;
+}
+
+.right-faq-box:hover h2{
+    margin-left: 1.5vh;
+}
+
+.right-faq-box h2{
+    font-size: 1.3rem;
+    padding-top: 1.5vh;
+    font-weight: 400;
+    transition: all ease 0.3s;
+}
+
+.right-faq-box h1{
+    font-size: 3.5vh;
+    transition: all ease 0.3s;
+    font-style: 'Magnetik';
+}
+
+.right-faq-box h1:hover{
+    scale: 110%;
+}
+
+footer{
+    height: 100vh;
+    width: 100%;
+    padding: 5vh calc(10% + 10px);
+    background-color: #dfdac6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.upper-f{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-f h1{
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Magnetik-A';
+}
+
+.up-arrow-box{
+    height: 9.7vh;
+    width: 9.7vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.3s;
+}
+
+.up-arrow-box:hover{
+    border-radius: 17px;
+}
+
+.disapp{
+    position: relative;
+    height: 5vh;
+    width: 5vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.disapp svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    width: 5vh;
+    rotate: -90deg;
+    transition: all ease 0.3s;
+}
+
+.up-arrow-box:hover .disapp svg{
+    top: -100%;
+}
+
+.overlay-ua{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #12271d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -100%;
+    left: 0;
+    transition: all ease 0.3s;
+}
+
+.up-arrow-box:hover .overlay-ua{
+    bottom: 0;
+}
+
+.overlay-ua svg{
+    rotate: -90deg;
+    height: 5vh;
+    width: 5vh;
+}
+
+.lower-f{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.upper-lf{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3vh;
+}
+
+.lf-box{
+    height: 100%;
+    width: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.lf-bg-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all ease 1s;
+    scale: 115%;
+}
+
+.lf-bg-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lf-box svg{
+    height: 100%;
+    width: 100%;
+}
+
+.lf-text{
+    width: 100%;
+    height: 6vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.lf-text h1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-family: 'Magnetik-A';
+    position: absolute;
+    z-index: 5;
+}
+
+.lf-img-box{
+    border: 1px solid #12271d;
+    border-radius: 5%;
+    transition: border-radius ease 0.5s;
+    overflow: hidden;
+}
+
+.lf-filter{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.283);
+    opacity: 0;
+}
+
+.lf-img-box:hover .lf-filter{
+    opacity: 1;
+}
+
+.lf-img-box:hover .lf-bg-img{
+    opacity: 1;
+    scale: 100%;
+}
+
+.lf-img-box:hover{
+    border-radius: 30%;
+    border: none;
+}
+
+.no-hover-lf{
+    top: 0;
+    transition: all ease 0.2s;
+}
+
+.hover-lf{
+    bottom: -100%;
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.lf-img-box:hover .no-hover-lf{
+    scale: 95%;
+    top: -100%;
+    opacity: 0;
+}
+
+.lf-img-box:hover .hover-lf{
+    bottom: 0;
+}
+
+.lower-lf{
+    height: 8vh;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vh;
+    border: 1px solid #12271d;
+}
+
+.left-lf{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.f-socials{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+    margin-left: 2.5vh;
+}
+
+.f-social:hover{
+    scale: 108%;
+}
+
+.f-social{
+    transition: all ease 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    width: 3vh;
+}
+
+.left-lf h3{
+    font-weight: 500;
+    font-style: 'Magnetik-A';
+    font-size: 1.1rem;
+}
+
+.right-lf{
+    display: flex;
+    gap: 3vh;
+}
+
+.right-lf-text{
+    position: relative;
+    overflow: hidden;
+    height: 3vh;
+    width: fit-content;
+}
+
+.right-lf-text h3{
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: all ease 0.3s;
+}
+
+.checking-purpose-rlf{
+    opacity: 0;
+}
+
+.no-hover-rlf, .hover-rlf{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.no-hover-rlf{
+    top: 0;
+}
+
+.right-lf-text:hover .no-hover-rlf{
+    scale: 90%;
+    top: -100%;
+}
+
+.hover-rlf{
+    scale: 90%;
+    bottom: -100%;
+}
+
+.right-lf-text:hover .hover-rlf{
+    scale: 100%;
+    bottom: 0%;
 }
 
 @media (max-width: 480px) {

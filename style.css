@@ -668,6 +668,29 @@ nav:hover{
     overflow: hidden;
 }
 
+.quantity-container-box{
+    position: absolute;
+    bottom: 1%;
+    left: 3%;
+    display: flex;
+    gap: 1vh;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.quantity-container-box h3{
+    border-radius: 4px;
+    font-size: 0.7rem;
+    border: 1px solid #12271d;
+    font-weight: 400;
+    padding: 3px 6px;
+}
+
+.p4-product-container:hover .quantity-container-box{
+    opacity: 1;
+    bottom: 3%;
+}
+
 .p4-image{
     height: 100%;
     width: 100%;
